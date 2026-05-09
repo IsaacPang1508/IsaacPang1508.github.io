@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Isaac Pang Ja Ler — Portfolio</title>
+<link rel="stylesheet" href="https://unpkg.com/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{--primary:#185fa5;--primary-light:#e6f1fb;--primary-mid:#378add;--primary-dark:#0c447c;}
+body{font-family:'Segoe UI',system-ui,sans-serif;color:#1a1a1a;background:#f0f4f8;line-height:1.7;font-size:15px;}
+a{color:#185fa5;text-decoration:none;}
+nav{background:#0c447c;padding:0 1.5rem;display:flex;align-items:center;justify-content:space-between;height:52px;position:sticky;top:0;z-index:10;}
+.nav-logo{font-weight:500;font-size:15px;color:#fff;}
+.nav-links{display:flex;gap:1.25rem;}
+.nav-links a{font-size:13px;color:#b5d4f4;text-decoration:none;}
+.nav-links a:hover{color:#fff;}
+.hero{background:linear-gradient(135deg,#0c447c 0%,#185fa5 100%);padding:2.5rem 1.5rem;text-align:center;}
+.avatar{width:84px;height:84px;border-radius:50%;background:#e6f1fb;display:flex;align-items:center;justify-content:center;font-size:26px;font-weight:500;color:#0c447c;margin:0 auto 1rem;border:3px solid #85b7eb;}
+.hero h1{font-size:24px;font-weight:500;margin-bottom:4px;color:#fff;}
+.hero .sub{font-size:14px;color:#b5d4f4;margin-bottom:0.75rem;}
+.hero .tagline{font-size:13px;color:#b5d4f4;max-width:500px;margin:0 auto 1.25rem;line-height:1.6;}
+.contacts{display:flex;justify-content:center;flex-wrap:wrap;gap:0.75rem;font-size:13px;color:#b5d4f4;margin-bottom:1.25rem;}
+.contacts span{display:flex;align-items:center;gap:4px;}
+.dl-btn{display:inline-flex;align-items:center;gap:6px;background:#fff;color:#0c447c;font-size:13px;font-weight:500;padding:8px 20px;border-radius:99px;border:none;cursor:pointer;text-decoration:none;}
+.dl-btn:hover{background:#e6f1fb;}
+.container{max-width:720px;margin:0 auto;padding:1.5rem;}
+section{margin-bottom:2rem;}
+.section-label{font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#666;margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:0.5px solid rgba(0,0,0,0.1);}
+.card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:0.6rem;}
+.card-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:0.4rem;flex-wrap:wrap;gap:4px;}
+.card-title{font-size:14px;font-weight:500;color:#1a1a1a;}
+.card-sub{font-size:13px;color:#185fa5;}
+.card-date{font-size:12px;color:#666;}
+.card ul{padding-left:1rem;font-size:13px;color:#555;margin-top:0.4rem;}
+.card ul li{margin-bottom:2px;}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.6rem;}
+.skill-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:0.9rem;}
+.skill-label{font-size:11px;font-weight:500;text-transform:uppercase;letter-spacing:0.06em;color:#666;margin-bottom:0.5rem;}
+.tags{display:flex;flex-wrap:wrap;gap:4px;}
+.tag{font-size:12px;background:#f0f4f8;border:0.5px solid rgba(0,0,0,0.1);border-radius:99px;padding:2px 9px;color:#1a1a1a;}
+.proj-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0.6rem;}
+.proj-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.1rem 1.25rem;}
+.proj-icon{width:36px;height:36px;border-radius:8px;background:#e6f1fb;display:flex;align-items:center;justify-content:center;color:#185fa5;font-size:18px;margin-bottom:0.6rem;}
+.proj-title{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px;}
+.proj-desc{font-size:13px;color:#555;line-height:1.5;margin-bottom:8px;}
+.proj-tag{font-size:11px;background:#e6f1fb;color:#185fa5;border-radius:99px;padding:2px 8px;margin-right:3px;display:inline-block;margin-bottom:3px;}
+.edu-card{background:#fff;border:0.5px solid rgba(0,0,0,0.1);border-radius:12px;padding:1.1rem 1.25rem;margin-bottom:0.6rem;display:flex;gap:1rem;}
+.edu-icon{width:38px;height:38px;border-radius:8px;background:#e6f1fb;display:flex;align-items:center;justify-content:center;color:#185fa5;font-size:18px;flex-shrink:0;}
+.edu-degree{font-size:14px;font-weight:500;color:#1a1a1a;}
+.edu-school{font-size:13px;color:#185fa5;}
+.edu-date{font-size:12px;color:#666;margin-top:2px;}
+.badge{display:inline-block;background:#e6f1fb;color:#185fa5;font-size:11px;padding:2px 8px;border-radius:99px;margin:3px 2px 0;}
+footer{text-align:center;padding:1.5rem;font-size:12px;color:#666;border-top:0.5px solid rgba(0,0,0,0.1);background:#fff;}
+</style>
+</head>
+<body>
+<nav>
+  <span class="nav-logo">Isaac Pang</span>
+  <div class="nav-links">
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
+    <a href="#education">Education</a>
+  </div>
+</nav>
+<div class="hero">
+  <div class="avatar">IP</div>
+  <h1>Isaac Pang Ja Ler</h1>
+  <p class="sub">BSc Computer Science (Artificial Intelligence) &middot; APU</p>
+  <p class="tagline">Technology student with a culinary background, channeling precision and teamwork into AI, machine learning, and software development.</p>
+  <div class="contacts">
+    <span><i class="ti ti-mail"></i> issacpang158@gmail.com</span>
+    <span><i class="ti ti-phone"></i> 0182356012</span>
+    <span><i class="ti ti-map-pin"></i> Seri Kembangan, Selangor</span>
+  </div>
+  <a class="dl-btn" href="mailto:issacpang158@gmail.com?subject=Resume Request">
+    <i class="ti ti-download"></i> Download Resume
+  </a>
+</div>
+<div class="container">
+  <section id="skills">
+    <p class="section-label">Skills</p>
+    <div class="skills-grid">
+      <div class="skill-card"><div class="skill-label">Programming</div><div class="tags"><span class="tag">Python</span><span class="tag">Java</span><span class="tag">SQL</span></div></div>
+      <div class="skill-card"><div class="skill-label">AI &amp; ML</div><div class="tags"><span class="tag">Neural Networks</span><span class="tag">NLP</span><span class="tag">Data Visualization</span></div></div>
+      <div class="skill-card"><div class="skill-label">Core CS</div><div class="tags"><span class="tag">Data Structures</span><span class="tag">Algorithms</span><span class="tag">Web Dev</span></div></div>
+      <div class="skill-card"><div class="skill-label">Tools</div><div class="tags"><span class="tag">GitHub</span><span class="tag">VS Code</span></div></div>
+      <div class="skill-card"><div class="skill-label">Soft Skills</div><div class="tags"><span class="tag">Problem Solving</span><span class="tag">Teamwork</span><span class="tag">Under Pressure</span></div></div>
+    </div>
+  </section>
+  <section id="projects">
+    <p class="section-label">Projects</p>
+    <div class="proj-grid">
+      <div class="proj-card"><div class="proj-icon"><i class="ti ti-brain"></i></div><div class="proj-title">AI Text Classifier</div><div class="proj-desc">Built a text classification model using NLP techniques to categorise input data into predefined categories.</div><span class="proj-tag">Python</span><span class="proj-tag">NLP</span><span class="proj-tag">ML</span></div>
+      <div class="proj-card"><div class="proj-icon"><i class="ti ti-database"></i></div><div class="proj-title">Database Management System</div><div class="proj-desc">Designed and implemented a relational database with SQL queries for data retrieval and management.</div><span class="proj-tag">SQL</span><span class="proj-tag">Java</span></div>
+      <div class="proj-card"><div class="proj-icon"><i class="ti ti-code"></i></div><div class="proj-title">Data Structures Implementation</div><div class="proj-desc">Implemented core data structures including linked lists, trees, and sorting algorithms from scratch.</div><span class="proj-tag">Python</span><span class="proj-tag">DSA</span></div>
+      <div class="proj-card"><div class="proj-icon"><i class="ti ti-world"></i></div><div class="proj-title">Web Application</div><div class="proj-desc">Developed a full-stack web application as part of coursework, focusing on usability and clean design.</div><span class="proj-tag">HTML/CSS</span><span class="proj-tag">JavaScript</span></div>
+    </div>
+  </section>
+  <section id="experience">
+    <p class="section-label">Work Experience</p>
+    <div class="card">
+      <div class="card-head"><div><div class="card-title">Sushi Chef</div><div class="card-sub">Iki Omakase</div></div><div class="card-date">Feb 2023 &ndash; Mar 2023</div></div>
+      <ul><li>Prepared maki, nigiri, and sashimi to high presentation standards</li><li>Managed daily food preparation and consistent kitchen workflow</li><li>Prepared appetizers, soups, and salads aligned with the omakase menu</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="card-title">Commis Chef</div><div class="card-sub">Neighbour Coffee Bar</div></div><div class="card-date">Oct 2022 &ndash; Dec 2022</div></div>
+      <ul><li>Supported head chef during peak service hours with precision and efficiency</li><li>Fulfilled customer orders accurately in a fast-paced environment</li></ul>
+    </div>
+    <div class="card">
+      <div class="card-head"><div><div class="card-title">Trainee</div><div class="card-sub">EQ Hotel (5-Star)</div></div><div class="card-date">Jan 2022 &ndash; May 2022</div></div>
+      <ul><li>Contributed to wine list and menu development at a premier 5-star hotel</li><li>Proposed innovative dish ideas incorporated into the hotel menu</li><li>Assisted in managing a large kitchen team and coordinating meal preparation</li></ul>
+    </div>
+  </section>
+  <section id="education">
+    <p class="section-label">Education</p>
+    <div class="edu-card">
+      <div class="edu-icon"><i class="ti ti-school"></i></div>
+      <div><div class="edu-degree">Bachelor of Computer Science (Hons) &mdash; Artificial Intelligence</div><div class="edu-school">Asia Pacific University of Technology &amp; Innovation (APU)</div><div class="edu-date">Aug 2024 &ndash; Current</div><div style="margin-top:6px;"><span class="badge">Python</span><span class="badge">AI Methods</span><span class="badge">Data Structures</span><span class="badge">Machine Learning</span><span class="badge">Web Development</span><span class="badge">Concurrent Programming</span></div></div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-icon"><i class="ti ti-chef-hat"></i></div>
+      <div><div class="edu-degree">Diploma in Culinary Arts</div><div class="edu-school">Berjaya University College</div><div class="edu-date">Sep 2020 &ndash; Aug 2022</div><div style="margin-top:6px;"><span class="badge">Menu Planning</span><span class="badge">Kitchen Management</span><span class="badge">Entrepreneurship</span><span class="badge">Food Cost Control</span></div></div>
+    </div>
+  </section>
+</div>
+<footer>
+  <p>Isaac Pang Ja Ler &middot; issacpang158@gmail.com &middot; 0182356012</p>
+  <p style="margin-top:4px;">BSc Computer Science (AI) &middot; Asia Pacific University of Technology &amp; Innovation</p>
+</footer>
+</body>
+</html>
